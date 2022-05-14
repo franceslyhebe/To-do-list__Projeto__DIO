@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,800;1,900&display=swap');
+
+:root{
+    --background-color: hsl(216, 37%, 9%);
+    --primary-color: hsl(218, 43%, 12%); 
+    --text-color: hsl(227, 18%, 90%);
+    --overlay: rgba(17, 27, 44, 0.932);
+    --color-clear: hsl(263, 78%, 42%);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.container{
+    width:380px;
+    margin: 50px;
+
+}
+
+.header{
+    width: 380px;
+    height:200px;
+    background-image: url('./assets/bg2.jpg');
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+
+#data{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: var(--text-color);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+/* ------------ content ------------ */
+.content{
+    width:380px;
+    height: 380px;
+    background-color: var(--overlay);
+    overflow: auto;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);   
+}
+.content::-webkit-scrollbar { 
+    display: none; 
+}
+.content ul{
+    padding:0;
+    margin:0;
+}
+.todo_list ul li{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom:#e7e5f0 solid 1px;
+}
+
+.todo_list ul li p{
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.todo_list ul button{
+    background-color: transparent;
+    border-color: transparent;
+    width: 55px;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+.todo_list ul button:hover{
+    width: 55px;
+    border-radius: 5px;
+    color: var(--color-clear);
+    font-weight: bold;
+}
+
+:checked + p {
+    text-decoration: line-through;
+}
+
+
+/* ------------ add item ------------ */
+.add-item{
+    position: relative;
+    height:50px;
+    background-color: var(--overlay);
+    padding: 5px;
+}
+.add-item button{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    font-size: 40px;
+    color: var(--text-color);
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.add-item button:hover{
+    color: var(--color-clear);
+}
+
+.add-item input{
+    position: relative;
+    top: 10px;
+    height: 35px;
+    width: 310px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--text-color);
+}
+.add-item input::-webkit-input-placeholder { 
+    color: var(--text-color);
+    font-size: 20px;    
+}
+
